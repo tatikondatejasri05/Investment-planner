@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: investment-planner
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        generateValue: true
+    disk:
+      name: data
+      mountPath: /data
+      sizeGB: 1
